@@ -1,4 +1,4 @@
-package dev.lyze.ledmap.json.optional;
+package dev.lyze.ledmap.json.types;
 
 import com.badlogic.gdx.utils.Json;
 import com.badlogic.gdx.utils.JsonValue;

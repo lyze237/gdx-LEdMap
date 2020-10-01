@@ -1,6 +1,6 @@
 package dev.lyze.ledmap.json;
 
-import dev.lyze.ledmap.json.optional.OptionalInt;
+import dev.lyze.ledmap.json.types.OptionalInt;
 
 public class Entity {
     private String identifier;

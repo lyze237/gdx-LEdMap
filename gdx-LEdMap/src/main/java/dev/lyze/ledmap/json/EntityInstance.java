@@ -8,7 +8,7 @@ public class EntityInstance {
 
     private int defUid;
 
-    private Field[] fieldInstances;
+    private FieldInstance[] fieldInstances;
     @Deprecated
     private Object[] realEditorValues; // TODO meh?
 

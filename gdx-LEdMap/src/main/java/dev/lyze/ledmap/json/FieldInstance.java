@@ -1,11 +1,12 @@
 package dev.lyze.ledmap.json;
 
-public class Field {
+import dev.lyze.ledmap.json.types.Anything;
+
+public class FieldInstance {
     private String __identifier;
 
     private String __type;
-    @Deprecated
-    private Object __value; // TODO can be anything
+    private Anything __value; // TODO can be anything
 
     private String defUid;
 

@@ -2,7 +2,7 @@ package dev.lyze.ledmap.json;
 
 import dev.lyze.ledmap.json.auto.AutoIntGrid;
 import dev.lyze.ledmap.json.auto.AutoRule;
-import dev.lyze.ledmap.json.optional.OptionalInt;
+import dev.lyze.ledmap.json.types.OptionalInt;
 
 public class Layer {
     private String type;

@@ -1,9 +1,12 @@
-name: Test pull requests
+name: Test the library
 
 on:
+  push:
+    branches:
+      - main
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   test:

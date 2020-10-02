@@ -1,5 +1,6 @@
 plugins {
     id 'maven-publish'
+    id 'jacoco'
 }
 
 publishing {
@@ -34,9 +35,33 @@ publishing {
 dependencies {
     api "com.badlogicgames.gdx:gdx:$gdxVersion"
 
-    testImplementation "com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion"
-    testImplementation group: 'com.badlogicgames.gdx', name: 'gdx-platform', version: gdxVersion, classifier: 'natives-desktop'
+    testImplementation "org.junit.jupiter:junit-jupiter-api:$junitVersion"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
+
+    testImplementation "org.mockito:mockito-core:$mockitoVersion"
+    testImplementation "com.badlogicgames.gdx:gdx-backend-headless:$gdxVersion"
+    testImplementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
 }
+
+test {
+    testLogging {
+        events "failed"
+        exceptionFormat "full"
+    }
+
+    useJUnitPlatform()
+
+    finalizedBy(tasks.jacocoTestReport)
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+        html.enabled false
+    }
+}
+
+check.dependsOn jacocoTestReport
 
 task currentVersion() {
     doLast {

@@ -1,5 +1,7 @@
 package dev.lyze.ledmap.json;
 
+import dev.lyze.ledmap.json.types.TodoObject;
+
 public class Tileset {
     private String identifier;
 
@@ -16,5 +18,5 @@ public class Tileset {
     private int uid;
 
     @Deprecated
-    private Object[] savedSelections; // TODO meh?
+    private TodoObject[] savedSelections; // TODO meh?
 }

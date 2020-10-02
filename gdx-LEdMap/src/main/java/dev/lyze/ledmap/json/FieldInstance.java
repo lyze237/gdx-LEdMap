@@ -1,6 +1,7 @@
 package dev.lyze.ledmap.json;
 
 import dev.lyze.ledmap.json.types.Anything;
+import dev.lyze.ledmap.json.types.TodoObject;
 
 public class FieldInstance {
     private String __identifier;
@@ -11,5 +12,5 @@ public class FieldInstance {
     private String defUid;
 
     @Deprecated
-    private Object[] realEditorValues; // TODO meh?
+    private TodoObject[] realEditorValues; // TODO meh?
 }

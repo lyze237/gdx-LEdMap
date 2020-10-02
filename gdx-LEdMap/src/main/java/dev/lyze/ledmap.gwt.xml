@@ -4,4 +4,7 @@
     <source path=""/>
     <inherits name="com.badlogic.gdx.backends.gdx_backends_gwt" />
     <extend-configuration-property name="gdx.reflect.include" value="dev.lyze.ledmap.json"/>
+    <extend-configuration-property name="gdx.reflect.include" value="dev.lyze.ledmap.json.auto"/>
+    <extend-configuration-property name="gdx.reflect.include" value="dev.lyze.ledmap.json.grids"/>
+    <extend-configuration-property name="gdx.reflect.include" value="dev.lyze.ledmap.json.types"/>
 </module>

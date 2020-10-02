@@ -1,6 +1,7 @@
 package dev.lyze.ledmap.json;
 
 import dev.lyze.ledmap.json.types.OptionalInt;
+import dev.lyze.ledmap.json.types.TodoObject;
 
 public class Entity {
     private String identifier;
@@ -25,5 +26,5 @@ public class Entity {
     private float pivotY;
 
     @Deprecated
-    private Object[] fieldDefs; // TODO dynamic
+    private TodoObject[] fieldDefs; // TODO dynamic
 }

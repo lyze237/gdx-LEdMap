@@ -1,5 +1,7 @@
 package dev.lyze.ledmap.json;
 
+import dev.lyze.ledmap.json.types.TodoObject;
+
 public class EntityInstance {
     private int __cx;
     private int __cy;
@@ -10,7 +12,7 @@ public class EntityInstance {
 
     private FieldInstance[] fieldInstances;
     @Deprecated
-    private Object[] realEditorValues; // TODO meh?
+    private TodoObject[] realEditorValues; // TODO meh?
 
     private int x;
     private int y;

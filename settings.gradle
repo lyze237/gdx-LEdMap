@@ -1,2 +1,2 @@
 rootProject.name = 'gdx-LEdMap'
-include 'gdx-LEdMap', ':tests:lwjgl3', ':tests:html', ':tests:core'
+include 'gdx-LEdMap', ':example:lwjgl3', ':example:html', ':example:core'

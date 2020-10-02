@@ -7,7 +7,7 @@ on:
   pull_request:
 
 jobs:
-  test:
+  Test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -22,10 +22,19 @@ jobs:
       - name: Fix permissions
         run: chmod +x gradlew
 
-      - name: Build project
+      - name: Test project
         run: ./gradlew gdx-LEdMap:check
 
-  publish:
+      - name: Publish Unit Test Results
+        uses: EnricoMi/publish-unit-test-result-action@v1.2
+        if: always()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          files: gdx-LEdMap/build/test-results/**/*.xml
+          report_individual_runs: true
+
+
+  Publish:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     needs: test

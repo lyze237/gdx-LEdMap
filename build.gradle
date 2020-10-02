@@ -19,10 +19,20 @@ configure(subprojects) {
     }
 }
 
+def getGitHash = { ->
+	def stdout = new ByteArrayOutputStream()
+	exec {
+		commandLine 'git', 'rev-list', '--count', 'HEAD'
+		standardOutput = stdout
+	}
+	return stdout.toString().trim()
+}
+
 subprojects {
     [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 
-    version = '0.0.1-SNAPSHOT'
+    version = '0.0.' + getGitHash()
+    group = "dev.lyze"
 
     repositories {
         mavenLocal()

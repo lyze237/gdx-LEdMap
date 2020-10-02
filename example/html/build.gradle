@@ -28,7 +28,7 @@ gwt {
 dependencies {
 	implementation project(':example:core')
 
-	implementation "com.github.lyze237:gdx-LEdMap:$gdxLEdMapVersion:sources"
+	//implementation "com.github.lyze237:gdx-LEdMap:$gdxLEdMapVersion:sources"
 
 	implementation "com.badlogicgames.gdx:gdx:$gdxVersion:sources"
 	implementation "com.badlogicgames.gdx:gdx-backend-gwt:$gdxVersion"

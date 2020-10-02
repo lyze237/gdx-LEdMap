@@ -1,5 +1,5 @@
 dependencies {
-	implementation "com.github.lyze237:gdx-LEdMap:$gdxLEdMapVersion"
+	//implementation "com.github.lyze237:gdx-LEdMap:$gdxLEdMapVersion"
 
 	api "com.badlogicgames.gdx:gdx:$gdxVersion"
 }

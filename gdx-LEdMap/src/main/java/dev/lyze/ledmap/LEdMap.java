@@ -19,5 +19,6 @@ public class LEdMap {
     }
 
     private void init(LEdFile file) {
+        Gdx.app.log("MAP", "Yay it works");
     }
 }

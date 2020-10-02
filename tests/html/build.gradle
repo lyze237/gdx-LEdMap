@@ -89,8 +89,8 @@ task dist(dependsOn: [clean, compileGwt]) {
 
 task addSource {
 	doLast {
-		sourceSets.main.compileClasspath += files(project(':core').sourceSets.main.allJava.srcDirs)
-		
+		sourceSets.main.compileClasspath += files(project(':tests:core').sourceSets.main.allJava.srcDirs)
+		sourceSets.main.compileClasspath += files(project(':gdx-LEdMap').sourceSets.main.allJava.srcDirs) // TODO Look into this why we need this
 	}
 }
 

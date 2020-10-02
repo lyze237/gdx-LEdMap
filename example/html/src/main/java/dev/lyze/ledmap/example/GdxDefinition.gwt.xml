@@ -4,7 +4,7 @@
 	<source path="" />
 	<inherits name="com.badlogic.gdx.backends.gdx_backends_gwt" />
 	<inherits name="dev.lyze.ledmap.example.GdxLEdMapTests" />
-	<inherits name="dev.lyze.ledmap" />
+	<!--<inherits name="dev.lyze.ledmap" />-->
 	<entry-point class="dev.lyze.ledmap.example.gwt.GwtLauncher" />
 	<set-configuration-property name="gdx.assetpath" value="../assets" />
 	<set-configuration-property name="xsiframe.failIfScriptTag" value="FALSE"/>

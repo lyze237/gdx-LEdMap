@@ -1,4 +1,4 @@
-name: Create a draft release
+name: Publish to github packages and create a draft release
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  draftRelease:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -23,6 +23,11 @@ jobs:
 
       - name: Build project
         run: ./gradlew gdx-LEdMap:build
+
+      - name: Publish package
+        run: ./gradlew gdx-LEdMap:publish
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Fetch version
         run: ./gradlew gdx-LEdMap:currentVersion

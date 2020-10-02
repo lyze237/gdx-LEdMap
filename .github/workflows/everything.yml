@@ -27,7 +27,7 @@ jobs:
 
   publish:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/main'
     needs: test
     steps:
       - uses: actions/checkout@v2
@@ -45,7 +45,29 @@ jobs:
       - name: Build project
         run: ./gradlew gdx-LEdMap:build
 
-      - name: Publish package
-        run: ./gradlew gdx-LEdMap:publish
+      - name: Fetch version
+        run: ./gradlew gdx-LEdMap:currentVersion
+
+      - name: Set version in script
+        run: echo "VERSION=$(cat gdx-LEdMap/build/version.txt)" >> $GITHUB_ENV
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ env.VERSION }}
+          release_name: (CI) gdx-LEdMap ${{ env.VERSION }}
+          draft: false
+          prerelease: true
+
+      - name: Upload jar release artifact
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: gdx-LEdMap/build/libs/gdx-LEdMap-${{ env.VERSION }}.jar
+          asset_name: gdx-LEdMap-${{ env.VERSION }}.jar
+          asset_content_type: application/x-java-archive

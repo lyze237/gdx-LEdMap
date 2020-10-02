@@ -27,6 +27,9 @@ gwt {
 
 dependencies {
 	implementation project(':example:core')
+
+	implementation "com.github.lyze237:gdx-LEdMap:$gdxLEdMapVersion:sources"
+
 	implementation "com.badlogicgames.gdx:gdx:$gdxVersion:sources"
 	implementation "com.badlogicgames.gdx:gdx-backend-gwt:$gdxVersion"
 	implementation "com.badlogicgames.gdx:gdx-backend-gwt:$gdxVersion:sources"
@@ -90,7 +93,6 @@ task dist(dependsOn: [clean, compileGwt]) {
 task addSource {
 	doLast {
 		sourceSets.main.compileClasspath += files(project(':example:core').sourceSets.main.allJava.srcDirs)
-		sourceSets.main.compileClasspath += files(project(':gdx-LEdMap').sourceSets.main.allJava.srcDirs) // TODO Look into this why we need this
 	}
 }
 

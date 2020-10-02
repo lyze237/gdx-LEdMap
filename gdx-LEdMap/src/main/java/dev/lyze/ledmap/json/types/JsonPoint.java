@@ -1,10 +1,10 @@
 package dev.lyze.ledmap.json.types;
 
-public class Point {
+public class JsonPoint {
     private int cx;
     private int cy;
 
-    public Point(int cx, int cy) {
+    public JsonPoint(int cx, int cy) {
         this.cx = cx;
         this.cy = cy;
     }
@@ -22,7 +22,7 @@ public class Point {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Point point = (Point) o;
+        JsonPoint point = (JsonPoint) o;
 
         if (getCx() != point.getCx()) return false;
         return getCy() == point.getCy();

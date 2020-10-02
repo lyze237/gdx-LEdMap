@@ -1,16 +1,16 @@
 package dev.lyze.ledmap.json;
 
 import dev.lyze.ledmap.json.types.Anything;
+import dev.lyze.ledmap.json.types.IgnoreObject;
 import dev.lyze.ledmap.json.types.TodoObject;
 
-public class FieldInstance {
+public class JsonFieldInstance {
     private String __identifier;
 
     private String __type;
-    private Anything __value; // TODO can be anything
+    private Anything __value;
 
     private String defUid;
 
-    @Deprecated
-    private TodoObject[] realEditorValues; // TODO meh?
+    private IgnoreObject[] realEditorValues; // only for editor, ignore
 }

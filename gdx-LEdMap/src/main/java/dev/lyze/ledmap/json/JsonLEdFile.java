@@ -1,7 +1,7 @@
 package dev.lyze.ledmap.json;
 
-public class LEdFile {
-    public Header __header__;
+public class JsonLEdFile {
+    public JsonHeader __header__;
 
     private String bgColor;
 
@@ -11,11 +11,11 @@ public class LEdFile {
     private float defaultPivotX;
     private float defaultPivotY;
 
-    private Definitions defs;
+    private JsonDefinitions defs;
 
     private String jsonVersion;
 
-    private Level[] levels;
+    private JsonLevel[] levels;
 
     private int nextUid;
 

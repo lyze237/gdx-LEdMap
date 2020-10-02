@@ -1,6 +1,6 @@
 package dev.lyze.ledmap.json.grids;
 
-public class Grid {
+public class JsonGrid {
     private int __srcX;
     private int __srcY;
 

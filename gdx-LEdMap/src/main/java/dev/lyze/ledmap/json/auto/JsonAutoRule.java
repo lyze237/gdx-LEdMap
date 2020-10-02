@@ -2,7 +2,7 @@ package dev.lyze.ledmap.json.auto;
 
 import dev.lyze.ledmap.json.types.TodoObject;
 
-public class AutoRule {
+public class JsonAutoRule {
     private boolean active;
     private boolean collapsed;
 

@@ -1,12 +1,12 @@
 package dev.lyze.ledmap.json;
 
-import dev.lyze.ledmap.json.auto.AutoIntGrid;
-import dev.lyze.ledmap.json.auto.AutoRule;
+import dev.lyze.ledmap.json.auto.JsonAutoIntGrid;
+import dev.lyze.ledmap.json.auto.JsonAutoRule;
 import dev.lyze.ledmap.json.types.OptionalInt;
 
-public class Layer {
+public class JsonLayerDefinition {
     private String type;
-    private AutoRule[] autoRuleGroups; // only relevant for auto layers
+    private JsonAutoRule[] autoRuleGroups; // only relevant for auto layers
 
     private OptionalInt autoSourceLayerDefUid;
     private OptionalInt autoTilesetDefUid;
@@ -16,7 +16,7 @@ public class Layer {
 
     private String identifier;
 
-    private AutoIntGrid[] intGridValues;
+    private JsonAutoIntGrid[] intGridValues;
 
     private float tilePivotX;
     private float tilePivotY;

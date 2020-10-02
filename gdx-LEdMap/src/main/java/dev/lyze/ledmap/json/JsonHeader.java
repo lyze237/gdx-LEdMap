@@ -1,6 +1,6 @@
 package dev.lyze.ledmap.json;
 
-public class Header {
+public class JsonHeader {
     private String fileType;
     private String app;
     private String appAuthor;

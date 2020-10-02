@@ -3,7 +3,7 @@ package dev.lyze.ledmap.json;
 import dev.lyze.ledmap.json.types.OptionalInt;
 import dev.lyze.ledmap.json.types.TodoObject;
 
-public class Entity {
+public class JsonEntityDefinition {
     private String identifier;
     private int uid;
 

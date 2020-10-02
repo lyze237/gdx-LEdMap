@@ -1,6 +1,6 @@
 package dev.lyze.ledmap.json.auto;
 
-public class AutoTile {
+public class JsonAutoTile {
     private int __srcX;
     private int __srcY;
     private int __x;

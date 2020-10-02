@@ -1,9 +1,9 @@
 package dev.lyze.ledmap.json;
 
-public class Level {
+public class JsonLevel {
     private String identifier;
 
-    private LayerInstance[] layerInstances;
+    private JsonLayerInstance[] layerInstances;
 
     private int pxHei;
     private int pxWid;

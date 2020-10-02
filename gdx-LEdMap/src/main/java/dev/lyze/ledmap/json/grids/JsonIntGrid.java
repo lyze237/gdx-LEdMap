@@ -1,6 +1,6 @@
 package dev.lyze.ledmap.json.grids;
 
-public class IntGrid {
+public class JsonIntGrid {
     private int coordId;
     private int v;
 }

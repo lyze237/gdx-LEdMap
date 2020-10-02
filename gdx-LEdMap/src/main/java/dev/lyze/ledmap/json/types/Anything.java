@@ -34,10 +34,10 @@ public class Anything implements Json.Serializable {
             else if (child.isLong())
                 value = jsonData.asLongArray();
             else if (child.isObject()) {
-                ArrayList<Point> points = new ArrayList<>();
+                ArrayList<JsonPoint> points = new ArrayList<>();
                 JsonValue next = child;
                 do {
-                    points.add(new Point(next.get("cx").asInt(), next.get("cy").asInt()));
+                    points.add(new JsonPoint(next.get("cx").asInt(), next.get("cy").asInt()));
                     next = next.next;
                 } while (next != null);
                 value = points.toArray();
@@ -59,7 +59,7 @@ public class Anything implements Json.Serializable {
         else if (jsonData.isLong())
             value = jsonData.asLong();
         else if (jsonData.isObject())
-            value = new Point(jsonData.getChild("cx").asInt(), jsonData.getChild("cy").asInt());
+            value = new JsonPoint(jsonData.getChild("cx").asInt(), jsonData.getChild("cy").asInt());
         else
             throw new IllegalArgumentException("unknown type for value: " + jsonData.name);
     }

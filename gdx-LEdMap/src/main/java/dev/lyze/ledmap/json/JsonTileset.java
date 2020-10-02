@@ -2,7 +2,7 @@ package dev.lyze.ledmap.json;
 
 import dev.lyze.ledmap.json.types.TodoObject;
 
-public class Tileset {
+public class JsonTileset {
     private String identifier;
 
     private int padding;

@@ -5,27 +5,27 @@ import dev.lyze.ledmap.json.grids.JsonGrid;
 import dev.lyze.ledmap.json.grids.JsonIntGrid;
 
 public class JsonLayerInstance {
-    private int __cHei;
-    private int __cWid;
-    private int __gridSize;
+    public int __cHei;
+    public int __cWid;
+    public int __gridSize;
 
-    private String __identifier;
+    public String __identifier;
 
-    private String __type;
+    public String __type;
 
-    private JsonAutoTiles[] autoTiles; // only for auto tile layers
+    public JsonAutoTiles[] autoTiles; // only for auto tile layers
 
-    private JsonEntityInstance[] entityInstances; // only for entity tile layers
+    public JsonEntityInstance[] entityInstances; // only for entity tile layers
 
-    private JsonGrid[] gridTiles; // only for tile layers
+    public JsonGrid[] gridTiles; // only for tile layers
 
-    private JsonIntGrid[] intGrid; // only for intgrid layers
+    public JsonIntGrid[] intGrid; // only for intgrid layers
 
-    private int layerDefUid;
-    private int levelId;
+    public int layerDefUid;
+    public int levelId;
 
-    private int pxOffsetX;
-    private int pxOffsetY;
+    public int pxOffsetX;
+    public int pxOffsetY;
 
-    private int seed;
+    public int seed;
 }

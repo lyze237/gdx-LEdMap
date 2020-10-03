@@ -5,12 +5,12 @@ import dev.lyze.ledmap.json.types.IgnoreObject;
 import dev.lyze.ledmap.json.types.TodoObject;
 
 public class JsonFieldInstance {
-    private String __identifier;
+    public String __identifier;
 
-    private String __type;
-    private Anything __value;
+    public String __type;
+    public Anything __value;
 
-    private String defUid;
+    public String defUid;
 
-    private IgnoreObject[] realEditorValues; // only for editor, ignore
+    public IgnoreObject[] realEditorValues; // only for editor, ignore
 }

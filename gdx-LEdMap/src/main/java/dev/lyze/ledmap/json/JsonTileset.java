@@ -3,20 +3,20 @@ package dev.lyze.ledmap.json;
 import dev.lyze.ledmap.json.types.TodoObject;
 
 public class JsonTileset {
-    private String identifier;
+    public String identifier;
 
-    private int padding;
+    public int padding;
 
-    private int pxHei;
-    private int pxWid;
+    public int pxHei;
+    public int pxWid;
 
-    private String relPath;
+    public String relPath;
 
-    private int spacing;
+    public int spacing;
 
-    private int tileGridSize;
-    private int uid;
+    public int tileGridSize;
+    public int uid;
 
     @Deprecated
-    private TodoObject[] savedSelections; // TODO meh?
+    public TodoObject[] savedSelections; // TODO meh?
 }

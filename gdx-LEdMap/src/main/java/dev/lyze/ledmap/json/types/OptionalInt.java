@@ -4,8 +4,8 @@ import com.badlogic.gdx.utils.Json;
 import com.badlogic.gdx.utils.JsonValue;
 
 public class OptionalInt implements Json.Serializable {
-    private boolean hasValue;
-    private int value;
+    public boolean hasValue;
+    public int value;
 
     @Override
     public void write(Json json) {

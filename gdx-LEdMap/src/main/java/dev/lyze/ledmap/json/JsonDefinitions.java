@@ -1,9 +1,9 @@
 package dev.lyze.ledmap.json;
 
 public class JsonDefinitions {
-    private JsonEntityDefinition[] entities;
-    private JsonEnumType[] enums;
-    private JsonEnumType[] externalEnums;
-    private JsonLayerDefinition[] layers;
-    private JsonTileset[] tilesets;
+    public JsonEntityDefinition[] entities;
+    public JsonEnumType[] enums;
+    public JsonEnumType[] externalEnums;
+    public JsonLayerDefinition[] layers;
+    public JsonTileset[] tilesets;
 }

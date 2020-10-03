@@ -22,11 +22,17 @@ public class LoadFilesTest extends LibgdxUnitTest {
     public void testAutoLayers2Stamps() {
         parseFile(Gdx.files.internal("AutoLayers_2_stamps.json"));
     }
-    @Test
 
+    @Test
     public void testAutoLayers3Advanced() {
         parseFile(Gdx.files.internal("AutoLayers_3_advanced.json"));
     }
+
+    @Test
+    public void testTypical2DPlatformerExample() {
+        parseFile(Gdx.files.internal("Typical_2D_platformer_example.json"));
+    }
+
 
     public LEdMap parseFile(FileHandle file) {
         Gdx.app.log("test", file.file().getAbsolutePath());

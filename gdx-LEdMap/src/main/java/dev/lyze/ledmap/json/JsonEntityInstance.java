@@ -3,16 +3,16 @@ package dev.lyze.ledmap.json;
 import dev.lyze.ledmap.json.types.IgnoreObject;
 
 public class JsonEntityInstance {
-    private int __cx;
-    private int __cy;
+    public int __cx;
+    public int __cy;
 
-    private String __identifier;
+    public String __identifier;
 
-    private int defUid;
+    public int defUid;
 
-    private JsonFieldInstance[] fieldInstances;
-    private IgnoreObject[] realEditorValues; // only for editor, ignore
+    public JsonFieldInstance[] fieldInstances;
+    public IgnoreObject[] realEditorValues; // only for editor, ignore
 
-    private int x;
-    private int y;
+    public int x;
+    public int y;
 }

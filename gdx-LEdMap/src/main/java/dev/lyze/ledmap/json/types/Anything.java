@@ -6,7 +6,7 @@ import com.badlogic.gdx.utils.JsonValue;
 import java.util.ArrayList;
 
 public class Anything implements Json.Serializable {
-    private Object value;
+    public Object value;
 
     @Override
     public void write(Json json) {

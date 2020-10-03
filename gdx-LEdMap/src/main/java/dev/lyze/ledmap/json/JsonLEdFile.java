@@ -3,21 +3,21 @@ package dev.lyze.ledmap.json;
 public class JsonLEdFile {
     public JsonHeader __header__;
 
-    private String bgColor;
+    public String bgColor;
 
-    private String name;
-    private int defaultGridSize;
+    public String name;
+    public int defaultGridSize;
 
-    private float defaultPivotX;
-    private float defaultPivotY;
+    public float defaultPivotX;
+    public float defaultPivotY;
 
-    private JsonDefinitions defs;
+    public JsonDefinitions defs;
 
-    private String jsonVersion;
+    public String jsonVersion;
 
-    private JsonLevel[] levels;
+    public JsonLevel[] levels;
 
-    private int nextUid;
+    public int nextUid;
 
-    private boolean minifyJson;
+    public boolean minifyJson;
 }

@@ -4,27 +4,27 @@ import dev.lyze.ledmap.json.types.OptionalInt;
 import dev.lyze.ledmap.json.types.TodoObject;
 
 public class JsonEntityDefinition {
-    private String identifier;
-    private int uid;
+    public String identifier;
+    public int uid;
 
-    private int width;
-    private int height;
+    public int width;
+    public int height;
 
-    private String color;
-    private String renderMode;
+    public String color;
+    public String renderMode;
 
-    private OptionalInt tilesetId;
-    private OptionalInt tileId;
+    public OptionalInt tilesetId;
+    public OptionalInt tileId;
 
-    private String tileRenderMode;
+    public String tileRenderMode;
 
-    private int maxPerLevel;
+    public int maxPerLevel;
 
-    private String limitBehavior;
+    public String limitBehavior;
 
-    private float pivotX;
-    private float pivotY;
+    public float pivotX;
+    public float pivotY;
 
     @Deprecated
-    private TodoObject[] fieldDefs; // TODO dynamic
+    public TodoObject[] fieldDefs; // TODO dynamic
 }

@@ -1,12 +1,12 @@
 package dev.lyze.ledmap.json;
 
 public class JsonLevel {
-    private String identifier;
+    public String identifier;
 
-    private JsonLayerInstance[] layerInstances;
+    public JsonLayerInstance[] layerInstances;
 
-    private int pxHei;
-    private int pxWid;
+    public int pxHei;
+    public int pxWid;
 
-    private int uid;
+    public int uid;
 }

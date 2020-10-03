@@ -31,7 +31,7 @@ public class LEdDefinitions {
     private void parse() {
         tilesets = Arrays.stream(json.tilesets).map(t -> new LEdTileset(t, folder)).toArray(LEdTileset[]::new);
         entities = Arrays.stream(json.entities).map(LEdEntityDefinition::new).toArray(LEdEntityDefinition[]::new);
-        enums = Stream.concat(Arrays.stream(json.enums), Arrays.stream(json.externalEnums)).map(LEdEnumType::new).toArray(LEdEnumType[]::new);
+        enums = Stream.concat(Arrays.stream(json.enums), Arrays.stream(json.externalEnums)).map(e -> new LEdEnumType(e, tilesets)).toArray(LEdEnumType[]::new);
 
         List<LEdLayerDefinition> allLayers = Arrays.stream(json.layers)
                 .filter(l -> !l.autoSourceLayerDefUid.hasValue)

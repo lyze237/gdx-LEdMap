@@ -2,7 +2,9 @@ package dev.lyze.ledmap.impl.definitions.layers;
 
 import com.badlogic.gdx.graphics.Color;
 import dev.lyze.ledmap.json.auto.JsonAutoIntGrid;
+import lombok.Getter;
 
+@Getter
 public class LEdIntGridLayerValue {
     private final JsonAutoIntGrid json;
 
@@ -18,13 +20,5 @@ public class LEdIntGridLayerValue {
     private void parse() {
         this.color = Color.valueOf(json.color);
         this.identifier = json.identifier;
-    }
-
-    public String getIdentifier() {
-        return identifier;
-    }
-
-    public Color getColor() {
-        return color;
     }
 }

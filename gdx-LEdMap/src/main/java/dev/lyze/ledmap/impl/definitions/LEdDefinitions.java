@@ -3,12 +3,14 @@ package dev.lyze.ledmap.impl.definitions;
 import dev.lyze.ledmap.impl.definitions.layers.LEdLayerDefinition;
 import dev.lyze.ledmap.impl.definitions.layers.LEdLayerDefinitionFactory;
 import dev.lyze.ledmap.json.JsonDefinitions;
+import lombok.Getter;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+@Getter
 public class LEdDefinitions {
     private final JsonDefinitions json;
 
@@ -39,21 +41,5 @@ public class LEdDefinitions {
                 .forEach(allLayers::add); // add auto source layers
 
         layers = allLayers.toArray(new LEdLayerDefinition[0]);
-    }
-
-    public LEdTileset[] getTilesets() {
-        return tilesets;
-    }
-
-    public LEdLayerDefinition[] getLayers() {
-        return layers;
-    }
-
-    public LEdEnumType[] getEnums() {
-        return enums;
-    }
-
-    public LEdEntityDefinition[] getEntities() {
-        return entities;
     }
 }

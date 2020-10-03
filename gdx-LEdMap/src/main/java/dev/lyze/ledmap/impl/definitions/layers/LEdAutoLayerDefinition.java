@@ -2,10 +2,12 @@ package dev.lyze.ledmap.impl.definitions.layers;
 
 import dev.lyze.ledmap.impl.definitions.LEdTileset;
 import dev.lyze.ledmap.json.JsonLayerDefinition;
+import lombok.Getter;
 
 import java.util.Arrays;
 import java.util.List;
 
+@Getter
 public class LEdAutoLayerDefinition extends LEdIntGridLayerDefinition {
     private final LEdTileset[] tilesets;
     private List<LEdLayerDefinition> layersWithoutAutoSource;
@@ -39,25 +41,5 @@ public class LEdAutoLayerDefinition extends LEdIntGridLayerDefinition {
             autoSourceLayerDef = layersWithoutAutoSource.stream().filter(l -> l.uid == getJson().autoSourceLayerDefUid.value).findFirst().get();
 
         autoLayerRuleGroups = Arrays.stream(getJson().autoRuleGroups).map(l -> new LEdAutoLayerRuleGroup(l, autoTilesetDef)).toArray(LEdAutoLayerRuleGroup[]::new);
-    }
-
-    public LEdAutoLayerRuleGroup[] getAutoLayerRuleGroups() {
-        return autoLayerRuleGroups;
-    }
-
-    public LEdLayerDefinition getAutoSourceLayerDef() {
-        return autoSourceLayerDef;
-    }
-
-    public int getAutoSourceLayerDefUid() {
-        return autoSourceLayerDefUid;
-    }
-
-    public LEdTileset getAutoTilesetDef() {
-        return autoTilesetDef;
-    }
-
-    public int getAutoTilesetDefUid() {
-        return autoTilesetDefUid;
     }
 }

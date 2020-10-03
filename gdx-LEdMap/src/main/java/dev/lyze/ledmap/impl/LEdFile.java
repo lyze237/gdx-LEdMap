@@ -4,7 +4,9 @@ import com.badlogic.gdx.graphics.Color;
 import dev.lyze.ledmap.impl.definitions.LEdDefinitions;
 import dev.lyze.ledmap.json.JsonLEdFile;
 import dev.lyze.ledmap.json.JsonLevel;
+import lombok.Getter;
 
+@Getter
 public class LEdFile {
     private final JsonLEdFile json;
 
@@ -35,25 +37,5 @@ public class LEdFile {
         this.defaultPivotY = json.defaultPivotY;
 
         this.defs = new LEdDefinitions(json.defs);
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public Color getBgColor() {
-        return bgColor;
-    }
-
-    public int getDefaultGridSize() {
-        return defaultGridSize;
-    }
-
-    public float getDefaultPivotY() {
-        return defaultPivotY;
-    }
-
-    public float getDefaultPivotX() {
-        return defaultPivotX;
     }
 }

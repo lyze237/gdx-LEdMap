@@ -1,7 +1,9 @@
 package dev.lyze.ledmap.impl.definitions.layers;
 
 import dev.lyze.ledmap.json.JsonLayerDefinition;
+import lombok.Getter;
 
+@Getter
 public class LEdEntitiesLayerDefinition extends LEdLayerDefinition {
     public LEdEntitiesLayerDefinition(JsonLayerDefinition json) {
         super(json);

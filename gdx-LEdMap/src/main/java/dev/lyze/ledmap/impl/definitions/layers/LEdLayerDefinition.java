@@ -1,7 +1,9 @@
 package dev.lyze.ledmap.impl.definitions.layers;
 
 import dev.lyze.ledmap.json.JsonLayerDefinition;
+import lombok.Getter;
 
+@Getter
 public abstract class LEdLayerDefinition {
     private final JsonLayerDefinition json;
 
@@ -32,28 +34,4 @@ public abstract class LEdLayerDefinition {
     }
 
     protected abstract void parseInternal();
-
-    public String getIdentifier() {
-        return identifier;
-    }
-
-    public LEdLayerDefinitionType getType() {
-        return type;
-    }
-
-    public JsonLayerDefinition getJson() {
-        return json;
-    }
-
-    public int getUid() {
-        return uid;
-    }
-
-    public int getGridSize() {
-        return gridSize;
-    }
-
-    public float getDisplayOpacity() {
-        return displayOpacity;
-    }
 }

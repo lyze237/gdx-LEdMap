@@ -2,9 +2,11 @@ package dev.lyze.ledmap.impl.definitions.layers;
 
 import dev.lyze.ledmap.impl.definitions.LEdTileset;
 import dev.lyze.ledmap.json.auto.JsonAutoLayerRuleGroup;
+import lombok.Getter;
 
 import java.util.Arrays;
 
+@Getter
 public class LEdAutoLayerRuleGroup {
     private final JsonAutoLayerRuleGroup json;
     private final LEdTileset tileset;
@@ -31,21 +33,5 @@ public class LEdAutoLayerRuleGroup {
         this.collapsed = json.collapsed;
 
         rules = Arrays.stream(json.rules).map(r -> new LEdAutoLayerRule(r, tileset)).toArray(LEdAutoLayerRule[]::new);
-    }
-
-    public LEdTileset getTileset() {
-        return tileset;
-    }
-
-    public LEdAutoLayerRule[] getRules() {
-        return rules;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getUid() {
-        return uid;
     }
 }

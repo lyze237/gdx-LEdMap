@@ -1,7 +1,9 @@
 package dev.lyze.ledmap.impl.definitions;
 
 import dev.lyze.ledmap.json.JsonEntityDefinition;
+import lombok.Getter;
 
+@Getter
 public class LEdEntityDefinition {
     private final JsonEntityDefinition json;
 

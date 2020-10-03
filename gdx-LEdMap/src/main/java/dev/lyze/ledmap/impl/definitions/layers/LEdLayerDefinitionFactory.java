@@ -2,11 +2,13 @@ package dev.lyze.ledmap.impl.definitions.layers;
 
 import dev.lyze.ledmap.impl.definitions.LEdTileset;
 import dev.lyze.ledmap.json.JsonLayerDefinition;
+import lombok.experimental.UtilityClass;
 
 import java.util.List;
 
+@UtilityClass
 public class LEdLayerDefinitionFactory {
-    public static LEdLayerDefinition create(JsonLayerDefinition json, LEdTileset[] tilesets, List<LEdLayerDefinition> layersWithoutAutoSource) {
+    public LEdLayerDefinition create(JsonLayerDefinition json, LEdTileset[] tilesets, List<LEdLayerDefinition> layersWithoutAutoSource) {
         LEdLayerDefinitionType lEdLayerDefinitionType = LEdLayerDefinitionType.valueOf(json.type);
 
         switch (lEdLayerDefinitionType) {

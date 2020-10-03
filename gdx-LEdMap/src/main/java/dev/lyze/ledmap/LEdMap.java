@@ -7,6 +7,7 @@ import dev.lyze.ledmap.json.JsonLEdFile;
 
 public class LEdMap {
     private LEdFile lEdFile;
+
     public LEdMap(FileHandle fileHandle) {
         Json json = new Json();
         json.setIgnoreDeprecated(true); // fixme temporary workaround to ignore those fields, transient keyword doesn't work

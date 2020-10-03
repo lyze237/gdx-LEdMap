@@ -2,9 +2,12 @@ package dev.lyze.ledmap.impl.definitions.layers;
 
 import dev.lyze.ledmap.impl.definitions.LEdTileset;
 import dev.lyze.ledmap.json.auto.JsonAutoLayerRule;
+import lombok.Getter;
 
+@Getter
 public class LEdAutoLayerRule {
     private final JsonAutoLayerRule json;
+
     private final LEdTileset tileset;
 
     private int uid;

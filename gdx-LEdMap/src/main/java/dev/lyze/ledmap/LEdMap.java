@@ -7,21 +7,19 @@ import dev.lyze.ledmap.json.JsonLEdFile;
 import lombok.var;
 
 public class LEdMap {
+    private final FileHandle fileHandle;
     private LEdFile lEdFile;
 
     public LEdMap(FileHandle fileHandle) {
+        this.fileHandle = fileHandle;
+
         var json = new Json();
         json.setIgnoreDeprecated(true); // fixme temporary workaround to ignore those fields, transient keyword doesn't work
 
-        var file = json.fromJson(JsonLEdFile.class, fileHandle);
-        init(file);
+        init(json.fromJson(JsonLEdFile.class, fileHandle));
     }
 
-    public LEdMap(JsonLEdFile file) {
-        init(file);
-    }
-
-    private void init(JsonLEdFile file) {
-        this.lEdFile = new LEdFile(file);
+    private void init(JsonLEdFile json) {
+        this.lEdFile = new LEdFile(json, fileHandle.parent());
     }
 }

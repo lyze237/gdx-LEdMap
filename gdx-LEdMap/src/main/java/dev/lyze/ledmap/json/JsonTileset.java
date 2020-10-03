@@ -1,6 +1,6 @@
 package dev.lyze.ledmap.json;
 
-import dev.lyze.ledmap.json.types.TodoObject;
+import dev.lyze.ledmap.json.types.IgnoreObject;
 
 public class JsonTileset {
     public String identifier;
@@ -17,6 +17,5 @@ public class JsonTileset {
     public int tileGridSize;
     public int uid;
 
-    @Deprecated
-    public TodoObject[] savedSelections; // TODO meh?
+    public IgnoreObject[] savedSelections; // TODO only for editor and not important to us
 }

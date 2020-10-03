@@ -5,9 +5,9 @@ A libgdx parser for LEd https://deepnight.net/tools/led-2d-level-editor/
 [![License](https://img.shields.io/github/license/lyze237/gdx-LEdMap)](https://github.com/lyze237/gdx-LEdMap/blob/main/LICENSE) 
 [![Jitpack](https://jitpack.io/v/lyze237/gdx-LEdMap.svg)](https://jitpack.io/#lyze237/gdx-LEdMap)
 
-# Note
+# Roadmap
 
-This is in an extremely early stage and does not work at all.
+Check the [project tab](https://github.com/lyze237/gdx-LEdMap/projects/1) for a roadmap.
 
 # Installation
 
